@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXSIZE 100
+#define MAXSIZE 100 // Defining the Maximum size of the array
 int main()
 {
     int arr[MAXSIZE];
@@ -16,7 +16,6 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-
     printf("Elements in the array are:\n");
     for (i = 0; i < size; i++)
     {
