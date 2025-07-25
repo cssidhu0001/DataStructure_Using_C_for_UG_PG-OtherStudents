@@ -1,29 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void mallocFunc()
+void callocFunc()
 {
-    int *arr = (int *)malloc(10 * sizeof(int));
+    int *arr = (int *)calloc(10, sizeof(int));
     if (arr == NULL)
     {
         fprintf(stderr, "Memory allocation failed\n");
         exit(EXIT_FAILURE);
     }
 
-    for (int i = 0; i < 10; i++)
-    {
-        arr[i] = i * 10;
-    }
-
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    free(arr);  // Free the allocated memory to prevent memory leaks
+    arr = NULL; // Set pointer to NULL after freeing
+    if (arr == NULL)
+        printf("Memory successfully freed\n");
 }
-
 int main()
 {
-    mallocFunc();
+    callocFunc();
     return 0;
 }
