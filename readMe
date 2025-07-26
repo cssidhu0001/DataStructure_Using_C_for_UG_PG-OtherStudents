@@ -1,0 +1,128 @@
+DataStructure_Using_C_for_UG_PG-OtherStudents
+Welcome to your comprehensive repository designed to help undergraduate and postgraduate students master data structures using the C programming language! This project aims to provide clear, practical C programs for essential data structures and algorithms, making it easy for students to find solutions and contribute new programs. Whether you are preparing for exams, interviews, or strengthening your coding fundamentals, this repo serves as your go-to resource.
+
+🚀 Features
+1. Programs covering all major data structures using C
+2. Well-documented code for easy understanding
+3. Open for student contributions (pull requests are welcome!)
+4. Support for queries and requests via comments or direct contact
+5. Continually updated with new topics and programs
+
+🔥 Table of Contents
+Below are the data structures and algorithms commonly covered in such a repository. Please customize this list by editing it once your repo’s file list is refreshed (since the current file reading failed):
+
+Arrays
+Basic array operations (traversal, insertion, deletion)
+
+Searching (Linear Search, Binary Search)
+
+Sorting (Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Merge Sort)
+
+Matrix operations (addition, multiplication, transpose)
+
+Linked Lists
+Singly Linked List (creation, insertion, deletion, searching, traversal)
+
+Doubly Linked List (creation, insertion, deletion, traversal)
+
+Circular Linked List
+
+Operations like reversal, concatenation
+
+Stacks
+Stack implementation (array and linked list)
+
+Push, pop, peek operations
+
+Applications (infix to postfix conversion, expression evaluation)
+
+Queues
+Queue implementation (array and linked list)
+
+Circular queue
+
+Double-ended queue (deque)
+
+Priority queue
+
+Trees
+Binary Tree (creation, insertion, traversal: inorder, preorder, postorder)
+
+Binary Search Tree (BST) (insertion, deletion, searching)
+
+Tree traversals (DFS, BFS)
+
+AVL Trees and other variants
+
+Graphs
+Representation (adjacency matrix, adjacency list)
+
+BFS and DFS traversal
+
+Shortest path algorithms
+
+Others
+Hash Tables
+
+Recursion examples (factorial, Fibonacci, Tower of Hanoi, GCD, etc.)
+
+Practice problems and solutions
+
+📁 Repository Structure
+The repo is typically organized as follows:
+
+text
+DataStructure_Using_C_for_UG_PG-OtherStudents/
+├── arrays/
+│   ├── array_operations.c
+│   └── sorting_algorithms.c
+├── linked_lists/
+│   ├── singly_linked_list.c
+│   └── doubly_linked_list.c
+├── stacks/
+│   └── stack_array.c
+├── queues/
+│   └── queue_linkedlist.c
+├── trees/
+│   ├── binary_tree.c
+│   └── bst.c
+├── graphs/
+│   └── bfs_dfs.c
+├── hashing/
+│   └── hashtable.c
+└── README.md
+Note: Check the actual repo for the latest program files and implementations, as this list may not reflect recent updates.
+
+📚 Getting Started
+Clone the repository
+
+text
+git clone https://github.com/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents.git
+Browse to the topic directory
+
+Compile the C file
+
+text
+gcc filename.c -o program
+./program
+Read comments in the code for explanations and usage
+
+🙌 Contributing
+Want to add your program? Fork the repository, add your code under the correct directory, and submit a pull request.
+
+Ensure your code is properly commented and follows standard C programming practices.
+
+Contributions from all students are encouraged and appreciated!
+
+💬 Support
+For any queries, doubts, or requests for new programs: Please open an issue or comment on the repo.
+
+You can also reach out to the maintainer directly via GitHub messages.
+
+🌱 License
+This repository is created to help students and is open for free use and educational purposes. If you use or enhance the code, please attribute this repository.
+
+⭐️ Please Star the Repo!
+If you find this repository helpful, don’t forget to give it a star to support ongoing development and help more students!
+
+Happy coding and learning Data Structures in C!
