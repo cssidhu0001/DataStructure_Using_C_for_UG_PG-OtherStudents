@@ -27,16 +27,15 @@ void inserationIn2DArray(int *rows, int *column, int arr[*rows][*column])
     }
     else
     {
-    printf("Enter Value you want to Enter at Row- %d & Column: %d", rowpos, colpos);
-    scanf("%d", &value);
-    for (int i = (*column) - 1; i < colpos; i--)
-    {
-        arr[rowpos - 1][(*column) + 1] = arr[rowpos - 1][(*column)];
-    }
-    arr[rowpos - 1][colpos - 1] = value;
-
-    (*column)++;
-    printf("Element - %d at Row- %d & Column: %d has been inserted Sucessfully!!", value, rowpos, colpos);
+        printf("Enter Value you want to Enter at Row- %d & Column: %d", rowpos, colpos);
+        scanf("%d", &value);
+        for (int j = (*column) - 1; j > colpos - 1; j--)
+        {
+            arr[rowpos - 1][j + 1] = arr[rowpos - 1][j];
+        }
+        arr[rowpos - 1][colpos - 1] = value;
+        (*column)++;
+        printf("Element - %d at Row- %d & Column: %d has been inserted Sucessfully!!", value, rowpos, colpos);
     }
 }
 void printarr(int *rows, int *column, int arr[*rows][*column])
