@@ -1,115 +1,111 @@
 #include "stdio.h"
 #include "stdlib.h"
-#define QUEUE_MAX 10
+#define QUEUE_MAX 5
 
-int QUEUE[QUEUE_MAX];
-int FRONT = -1, REAR = -1;
-
-void enqueue();
-void dequeue();
-void peek();
-void isEmpty();
-void isFull();
-void traverse();
+void enqueue(int *, int *, int *);
+void dequeue(int *, int *, int *);
+void peek(int *, int *, int *);
+void isEmpty(int *, int *);
+void isFull(int *, int *);
+void traverse(int *, int *, int *);
 void exitProgram();
 
-void enqueue()
+void enqueue(int QUEUE[], int *REAR, int *FRONT)
 {
     int enqueueElement;
-    if (REAR == QUEUE_MAX - 1)
+    if ((*REAR) == QUEUE_MAX - 1)
     {
         printf("Queue Overflow!!\nCannot Enqueue the Elements into the Queue!!");
     }
-    else if (FRONT == -1 && REAR == -1)
+    else if ((*FRONT) == -1 && (*REAR) == -1)
     {
-        FRONT = REAR = 0;
+        (*FRONT) = (*REAR) = 0;
         printf("Enter the Element you want to Enqueue in the Queue: ");
         scanf("%d", &enqueueElement);
-        QUEUE[REAR] = enqueueElement;
+        QUEUE[(*REAR)] = enqueueElement;
         printf("Element %d is Enqueued Sucessfully!!!\n", enqueueElement);
     }
     else
     {
-        REAR += 1;
+        (*REAR) += 1;
         printf("Enter the Element you want to Enqueue in the Queue: ");
         scanf("%d", &enqueueElement);
-        QUEUE[REAR] = enqueueElement;
+        QUEUE[(*REAR)] = enqueueElement;
         printf("Element %d is Enqueued Sucessfully!!!\n", enqueueElement);
     }
 }
 
-void dequeue()
+void dequeue(int QUEUE[], int *REAR, int *FRONT)
 {
     int dequeuedElement;
-    if (FRONT == -1 && REAR == -1)
+    if ((*FRONT) == -1 && (*REAR) == -1)
     {
         printf("Queue Underflow!!\nCannot Dequeue the Elements from the Queue!!");
     }
-    else if (FRONT == REAR)
+    else if ((*FRONT) == (*REAR))
     {
-        dequeuedElement = QUEUE[FRONT];
-        FRONT = REAR = -1;
+        dequeuedElement = QUEUE[(*FRONT)];
+        (*FRONT) = (*REAR) = -1;
         printf("Element %d is Dequeued Sucessfully from the Queue!!\n", dequeuedElement);
     }
     else
     {
-        dequeuedElement = QUEUE[FRONT];
-        FRONT += 1;
+        dequeuedElement = QUEUE[(*FRONT)];
+        (*FRONT) += 1;
         printf("Element %d is Dequeued Sucessfully from the Queue!!\n", dequeuedElement);
     }
 }
 
-void traverse()
+void traverse(int QUEUE[], int *REAR, int *FRONT)
 {
-    if (FRONT == -1 && REAR == -1)
+    if ((*FRONT) == -1 && (*FRONT) == -1)
     {
         printf("Queue Underflow!!\n Cannot traverse the Elements from the Queue!!");
     }
     else
     {
-
         printf("Elements in the Queue are: \n");
-        for (int i = FRONT; i <= REAR; i++)
+        for (int i = (*FRONT); i <= (*REAR); i++)
         {
             printf("%d  ", QUEUE[i]);
         }
     }
 }
-void isEmpty()
+void isEmpty(int *REAR, int *FRONT)
 {
-    if (FRONT == -1 && REAR == -1)
+    if ((*FRONT) == -1 && (*REAR) == -1)
     {
         printf("Queue is Empty!!\n ");
     }
     else
     {
-        printf("Queue will be Empty after Deqeueing %d Elements !!\n", (REAR + 1) - FRONT);
+        printf("Queue will be Empty after Deqeueing %d Elements !!\n", ((*REAR) + 1) - (*FRONT));
     }
 }
-void isFull()
+void isFull(int *REAR, int *FRONT)
 {
-    if (REAR == QUEUE_MAX - 1)
+    if ((*REAR) == QUEUE_MAX - 1)
     {
         printf("Queue is FULL!!\n ");
     }
     else
     {
-        printf("Queue will be FULL after Enqueuing %d Elements !!\n", (QUEUE_MAX - 1) - REAR);
+        printf("Queue will be FULL after Enqueuing %d Elements !!\n", (QUEUE_MAX - 1) - (*REAR));
     }
 }
 
-void peek()
+void peek(int QUEUE[], int *REAR, int *FRONT)
 {
     printf("\n------PEEK Queue------");
 
-    if (FRONT == -1 && REAR == -1)
+    if ((*FRONT) == -1 && (*REAR) == -1)
     {
         printf("Queue Underflow!!\n Cannot Peek the Element of  the Queue!!");
     }
     else
     {
 
-        printf("\nToppest value of the QUEUE is :%d", QUEUE[FRONT]);
+        printf("\nToppest value of the QUEUE is :%d", QUEUE[(*FRONT)]);
     }
 }
 
@@ -138,6 +134,8 @@ void exitProgram()
 
 int main()
 {
+    int QUEUE[QUEUE_MAX];
+    int FRONT = -1, REAR = -1;
     printf("------QUEUE------\n");
     int choice;
     while (1)
@@ -156,23 +154,23 @@ int main()
         switch (choice)
         {
         case 1:
-            enqueue();
+            enqueue(QUEUE, &FRONT, &REAR);
             break;
         case 2:
-            dequeue();
+            dequeue(QUEUE, &FRONT, &REAR);
             break;
         case 3:
-            peek();
+            peek(QUEUE, &FRONT, &REAR);
             break;
         case 4:
-            isEmpty();
+            isEmpty(&FRONT, &REAR);
             break;
 
         case 5:
-            isFull();
+            isFull(&FRONT, &REAR);
             break;
         case 6:
-            traverse();
+            traverse(QUEUE, &FRONT, &REAR);
             break;
         case 0:
             exitProgram();
