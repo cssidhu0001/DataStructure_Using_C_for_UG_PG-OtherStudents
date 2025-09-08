@@ -65,7 +65,7 @@ void traverse(int QUEUE[], int *REAR, int *FRONT)
     else
     {
         printf("Elements in the Queue are: \n");
-        for (int i = (*FRONT); i <= (*REARgi); i++)
+        for (int i = (*FRONT); i <= (*REAR); i++)
         {
             printf("%d  ", QUEUE[i]);
         }
