@@ -3,6 +3,7 @@
 int main()
 {
     int a[50], b[50], c[100];
+
     int i, k = 0, j, na, nb, flag;
 
     printf("Enter the number of elements in Array A and B:\n");
@@ -17,24 +18,29 @@ int main()
         scanf("%d", &b[i]);
 
     for (i = 0; i < na; i++)
-        c[k++] = a[i];
-
-    for (i = 0; i < nb; i++)
     {
         flag = 0;
-        for (j = 0; j < na; j++)
+        for (j = 0; j < nb; j++)
         {
-            if (b[i] == a[j])
+            if (a[i] == b[j])
             {
-                flag = 1;
-                break;
+
+                for (int x = 0; x < k; x++)
+                {
+                    if (c[x] == a[i])
+                    {
+                        flag = 1;
+                        break;
+                    }
+                }
+                if (!flag)
+                {
+                    c[k++] = a[i];
+                }
             }
         }
-        if (!flag)
-            c[k++] = b[i];
     }
-
-    printf("Union of the two arrays is:\n");
+    printf("Intersection of the two arrays is:\n");
     for (i = 0; i < k; i++)
         printf("%d ", c[i]);
 
