@@ -54,7 +54,7 @@ void dequeue()
     else
     {
         dequeuedElement = QUEUE[FRONT];
-        FRONT += 1;
+        FRONT = (FRONT + 1) % QUEUE_MAX;
         printf("Element %d is Dequeued Sucessfully from the Queue!!\n", dequeuedElement);
     }
 }
