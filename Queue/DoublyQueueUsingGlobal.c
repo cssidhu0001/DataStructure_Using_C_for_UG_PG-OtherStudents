@@ -5,9 +5,9 @@
 int QUEUE[QUEUE_MAX];
 int FRONT = -1, REAR = -1;
 
-void enqueuefromRear();
-void dequeuefromRear();
-void dequeuefromFront();
+void enqueuefromRear(); //Inseration in Queue from Rear
+void dequeuefromRear(); // Deletion in Queue from Rear (Doubly Major Part)
+void dequeuefromFront(); 
 void peek();
 void isEmpty();
 void isFull();
