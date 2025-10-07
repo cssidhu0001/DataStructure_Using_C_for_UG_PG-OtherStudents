@@ -10,9 +10,56 @@ struct Node
 
 struct Node *head = NULL, *temp = NULL;
 
+void createLinkedList();
+void traverseLinkedList();
+
 void createLinkedList()
 {
+    printf("Creation of Linked List!!\n");
     struct Node *newnode;
     newnode = (struct Node *)malloc(1 * (sizeof(struct Node)));
-    printf("Enter the Value of Element you want to insert: ")
+    printf("Enter the Value of Element you want to insert: ");
+    int value;
+    scanf("%d", &value);
+    newnode->Data = value;
+    newnode->Link = NULL;
+
+    // Actual creation of node becomes here!!
+    if (head == NULL)
+    {
+        temp = head = newnode;
+    }
+    else
+    {
+        temp->Link = newnode;
+        temp = newnode;
+    }
+}
+
+void traverseLinkedList()
+{
+    struct Node *tempV = head;
+    printf("Traversing Linked List!!\n");
+    if (head == NULL)
+    {
+        printf("Cannot Traverse Linked List is Empty!!\n");
+    }
+    else
+    {
+        printf("Elements in Linked List are: \n");
+        while (tempV != NULL)
+        {
+            printf("%d--> ", tempV->Data);
+            tempV = tempV->Link;
+        }
+    }
+}
+
+int main()
+{
+    createLinkedList();
+    createLinkedList();
+    createLinkedList();
+    createLinkedList();
+    traverseLinkedList();
 }
