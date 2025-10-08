@@ -13,6 +13,31 @@ struct Node *head = NULL, *temp = NULL;
 void createLinkedList();
 void traverseLinkedList();
 void linearSearchinLL();
+void insertatfrontLL();
+void inseratEndLL();
+
+void insertatfrontLL()
+{
+    int valueinsert;
+    struct Node *newnode;
+    newnode = (struct Node *)malloc(1 * (sizeof(struct Node)));
+    printf("\nInsert at Front Singly Linked List!!\n");
+    printf("\nEnter the value you want to insert at front of Linked List: ");
+    scanf("%d", &valueinsert);
+
+    newnode->Data = valueinsert;
+    newnode->Link = NULL;
+    if (head == NULL)
+    {
+        temp = head = newnode;
+    }
+    else
+    {
+        newnode->Link = head;
+        head = newnode;
+    }
+    printf("\nNode at front Value: %d inserted sucessfully!!", valueinsert);
+}
 
 void linearSearchinLL()
 {
@@ -97,4 +122,8 @@ int main()
     createLinkedList();
     traverseLinkedList();
     linearSearchinLL();
+    insertatfrontLL();
+    traverseLinkedList();
+    insertatfrontLL();
+    traverseLinkedList();
 }
