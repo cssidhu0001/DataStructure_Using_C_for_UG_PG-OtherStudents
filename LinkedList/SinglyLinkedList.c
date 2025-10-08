@@ -12,6 +12,40 @@ struct Node *head = NULL, *temp = NULL;
 
 void createLinkedList();
 void traverseLinkedList();
+void linearSearchinLL();
+
+void linearSearchinLL()
+{
+    struct Node *tempv = head;
+    int Search, found = 0, pos = 0;
+    printf("\nEnter an Element to be Searched: ");
+    scanf("%d", &Search);
+    if (head == NULL)
+    {
+        printf("\nCannot Search Element!! Linked List is Empty!!");
+    }
+    else
+    {
+        while (tempv != NULL)
+        {
+            pos++;
+            if (tempv->Data == Search)
+            {
+                found = 1;
+                break;
+            }
+            tempv = tempv->Link;
+        }
+        if (found == 1)
+        {
+            printf("\nElement found @ Pos: %d", pos);
+        }
+        else
+        {
+            printf("\nSearched Element %d  is not found!!", Search);
+        }
+    }
+}
 
 void createLinkedList()
 {
@@ -62,4 +96,5 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
+    linearSearchinLL();
 }
