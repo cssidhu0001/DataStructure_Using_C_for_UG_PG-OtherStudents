@@ -15,6 +15,7 @@ void traverseLinkedList();
 void linearSearchinLL();
 void insertatfrontLL();
 void inseratEndLL();
+void deleteatfront();
 
 void insertatfrontLL()
 {
