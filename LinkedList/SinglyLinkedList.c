@@ -18,6 +18,22 @@ void inseratEndLL();
 void deleteatfront();
 void insertatmidUsingPos();
 
+void deleteatfront()
+{
+    printf("Deletion at front Node in Singly Linked List!!\n");
+    struct node *temp = head;
+    if (head == NULL)
+    {
+        printf("Cannot delete the Node ..Linked List is Empty!!\n");
+    }
+    else
+    {
+        head->Link = head;
+        free(temp);
+        printf("First node of the Linked List has been Deleted Sucesfully!!");
+    }
+}
+
 void insertatmidUsingPos()
 {
     int valueinsert, pos;
