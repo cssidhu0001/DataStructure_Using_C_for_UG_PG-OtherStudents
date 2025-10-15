@@ -21,15 +21,15 @@ void insertatmidUsingPos();
 void deleteatfront()
 {
     printf("Deletion at front Node in Singly Linked List!!\n");
-    struct node *temp = head;
+    struct Node *tempV = head;
     if (head == NULL)
     {
         printf("Cannot delete the Node ..Linked List is Empty!!\n");
     }
     else
     {
-        head->Link = head;
-        free(temp);
+        head = head->Link;
+        free(tempV);
         printf("First node of the Linked List has been Deleted Sucesfully!!");
     }
 }
@@ -186,8 +186,11 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
-    insertatmidUsingPos();
+    deleteatfront();
     traverseLinkedList();
+
+    // insertatmidUsingPos();
+    // traverseLinkedList();
     // linearSearchinLL();
     // insertatfrontLL();
     // traverseLinkedList();
