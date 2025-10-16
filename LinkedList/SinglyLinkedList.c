@@ -10,6 +10,7 @@ struct Node
 
 struct Node *head = NULL, *temp = NULL;
 
+// Implemented Functions!!
 void createLinkedList();
 void traverseLinkedList();
 void linearSearchinLL();
@@ -20,6 +21,20 @@ void deleteAtEnd();
 void deleteAtMid();
 void insertatmidUsingPos();
 void countNodesOfLinkedList();
+
+// Not Implemented Functions  Yet to be Implemented!!
+void findMaximumNumberNode();
+void findMinimumNumberNode();
+void countEvenElementsNumberOfNodes();
+void countOddElementsNumberOfNodes();
+void findSecondMaxNodeInLL();
+void findSecondMinNodeInLL();
+void printTheReverseOfSinglyLL();
+void printTheSumofNodeLL();
+void deleteEntireLinkedList();
+void findLoopInLinkedList();
+void removeDuplicateFromLL();
+void findMidofLL();
 
 void countNodesOfLinkedList()
 {
