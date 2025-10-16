@@ -19,7 +19,27 @@ void deleteatfront();
 void deleteAtEnd();
 void deleteAtMid();
 void insertatmidUsingPos();
+void countNodesOfLinkedList();
 
+void countNodesOfLinkedList()
+{
+    printf("\n <----Count Number of Nodes  in Singly Linked List!!---->\n");
+    struct Node *temp = head;
+    int count = 0;
+    if (head == NULL)
+    {
+        printf("\nCannot count the Node ..Linked List is Empty!!\n");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            count++;
+            temp = temp->Link;
+        }
+        printf("\nTheir are %d node in Singly Linked List!!", count);
+    }
+}
 void deleteAtMid()
 {
     printf("\nDeletion at Mid Node in Singly Linked List at a certain Position!!\n");
@@ -80,7 +100,6 @@ void deleteatfront()
         printf("\nFirst node of the Linked List has been Deleted Sucesfully!!");
     }
 }
-
 void insertatmidUsingPos()
 {
     int valueinsert, pos;
@@ -106,7 +125,6 @@ void insertatmidUsingPos()
     temp->Link = newnode;
     printf("Node at Pos %d has been inserted Sucessfully!!");
 }
-
 void insertatfrontLL()
 {
     int valueinsert;
@@ -233,11 +251,12 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
+    countNodesOfLinkedList();
     // deleteatfront();
     // traverseLinkedList();
     // deleteAtEnd();
-    deleteAtMid();
-    traverseLinkedList();
+    // deleteAtMid();
+    // traverseLinkedList();
 
     // insertatmidUsingPos();
     // traverseLinkedList();
