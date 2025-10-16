@@ -17,8 +17,33 @@ void insertatfrontLL();
 void inseratEndLL();
 void deleteatfront();
 void deleteAtEnd();
+void deleteAtMid();
 void insertatmidUsingPos();
 
+void deleteAtMid()
+{
+    printf("\nDeletion at Mid Node in Singly Linked List at a certain Position!!\n");
+    struct Node *secondPtr, *temp = head;
+    int pos, count = 0;
+    if (head == NULL)
+    {
+        printf("\nCannot delete the Node ..Linked List is Empty!!\n");
+    }
+    else
+    {
+        printf("Enter the position at which you want to delete the Node: ");
+        scanf("%d", &pos);
+        while (count < pos - 1)
+        {
+            secondPtr = temp;
+            temp = temp->Link;
+            count++;
+        }
+        secondPtr->Link = temp->Link;
+        free(temp);
+        printf("\nNode At Pos %d  of the Linked List has been Deleted Sucesfully!!", pos);
+    }
+}
 void deleteAtEnd()
 {
     printf("\nDeletion at Last Node in Singly Linked List!!\n");
@@ -183,7 +208,7 @@ void createLinkedList()
 void traverseLinkedList()
 {
     struct Node *tempV = head;
-    printf("Traversing Linked List!!\n");
+    printf("\nTraversing Linked List!!\n");
     if (head == NULL)
     {
         printf("Cannot Traverse Linked List is Empty!!\n");
@@ -208,9 +233,10 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
-    deleteatfront();
-    traverseLinkedList();
-    deleteAtEnd();
+    // deleteatfront();
+    // traverseLinkedList();
+    // deleteAtEnd();
+    deleteAtMid();
     traverseLinkedList();
 
     // insertatmidUsingPos();
