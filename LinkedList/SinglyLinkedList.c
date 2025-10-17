@@ -21,10 +21,10 @@ void deleteAtEnd();
 void deleteAtMid();
 void insertatmidUsingPos();
 void countNodesOfLinkedList();
-
-// Not Implemented Functions  Yet to be Implemented!!
 void findMaximumNumberNode();
 void findMinimumNumberNode();
+
+// Not Implemented Functions  Yet to be Implemented!!
 void countEvenElementsNumberOfNodes();
 void countOddElementsNumberOfNodes();
 void findSecondMaxNodeInLL();
