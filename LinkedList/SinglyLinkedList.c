@@ -35,7 +35,27 @@ void deleteEntireLinkedList();
 void findLoopInLinkedList();
 void removeDuplicateFromLL();
 void findMidofLL();
+void findMinimumNumberNode()
+{
+    printf("\n <----Find Minumum in Singly Linked List!!---->\n");
+    struct Node *temp = head;
+    int mimumVar = temp->Data;
+    if (head == NULL)
+    {
+        printf("\nCannot Find the Minimum Node ..Linked List is Empty!!\n");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            if (temp->Data < mimumVar)
+                mimumVar = temp->Data;
 
+            temp = temp->Link;
+        }
+        printf("\nThe Minimum value in Linked List is : %d ", mimumVar);
+    }
+}
 void findMaximumNumberNode()
 {
     printf("\n <----Find Maximum   in Singly Linked List!!---->\n");
@@ -57,7 +77,6 @@ void findMaximumNumberNode()
         printf("\nThe maximum value in Linked List is : %d ", max);
     }
 }
-
 void countNodesOfLinkedList()
 {
     printf("\n <----Count Number of Nodes  in Singly Linked List!!---->\n");
@@ -289,6 +308,7 @@ int main()
     createLinkedList();
     traverseLinkedList();
     findMaximumNumberNode();
+    findMinimumNumberNode();
     // countNodesOfLinkedList();
     // deleteatfront();
     // traverseLinkedList();
