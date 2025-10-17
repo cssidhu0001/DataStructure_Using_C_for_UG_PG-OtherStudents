@@ -1,128 +1,132 @@
-DataStructure_Using_C_for_UG_PG-OtherStudents
-Welcome to your comprehensive repository designed to help undergraduate and postgraduate students master data structures using the C programming language! This project aims to provide clear, practical C programs for essential data structures and algorithms, making it easy for students to find solutions and contribute new programs. Whether you are preparing for exams, interviews, or strengthening your coding fundamentals, this repo serves as your go-to resource.
+<!-- 🌗 Dark / Light Mode Toggle Script -->
+<script>
+  function toggleTheme(){
+    const html = document.documentElement;
+    html.classList.toggle('light-mode');
+  }
+</script>
 
-🚀 Features
-1. Programs covering all major data structures using C
-2. Well-documented code for easy understanding
-3. Open for student contributions (pull requests are welcome!)
-4. Support for queries and requests via comments or direct contact
-5. Continually updated with new topics and programs
+<style>
+  :root {
+    --bg-dark:#0f1724;
+    --bg-light:#f5f5f5;
+    --text-dark:#e6eef6;
+    --text-light:#222;
+    --accent:#53b14f;
+    --card-dark:#0b1220;
+    --card-light:#ffffff;
+    --border-dark:#1f2937;
+    --border-light:#ddd;
+  }
+  html {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  html.light-mode {
+    background: var(--bg-light);
+    color: var(--text-light);
+  }
+  html.light-mode a {
+    color: var(--accent);
+  }
+</style>
 
-🔥 Table of Contents
-Below are the data structures and algorithms commonly covered in such a repository. Please customize this list by editing it once your repo’s file list is refreshed (since the current file reading failed):
+<!-- HEADER SECTION -->
+<div align="center" style="background:linear-gradient(90deg,#0f1724,#051018);padding:30px;border-radius:12px;">
+  <img src="https://github.com/cssidhu0001/cssidhu0001/blob/main/Charanjeet%20Singh%20Sidhu.png" alt="Logo" width="120" style="border-radius:50%;box-shadow:0 0 15px #53b14f;">
+  <h1 style="color:#53b14f;font-size:32px;margin:15px 0 5px;">📚 DataStructure_Using_C_for_UG_PG - Other Students</h1>
+  <p style="font-size:16px;max-width:700px;margin:auto;">
+    A powerful, open-source repository to help students master <strong>Data Structures in C</strong> through practical, well-structured code examples.  
+    Perfect for <em>Undergraduate</em> & <em>Postgraduate</em> students preparing for exams, placements, or building strong programming fundamentals 💪.
+  </p>
 
-Arrays
-Basic array operations (traversal, insertion, deletion)
+  <div style="margin-top:20px; display:flex; justify-content:center; flex-wrap:wrap; gap:15px;">
+    <a href="#-features"><img src="https://img.shields.io/badge/✨-Features-blueviolet?style=for-the-badge"></a>
+    <a href="#-table-of-contents"><img src="https://img.shields.io/badge/📑-Contents-success?style=for-the-badge"></a>
+    <a href="#-repository-structure"><img src="https://img.shields.io/badge/📁-Structure-informational?style=for-the-badge"></a>
+    <a href="#-contributing"><img src="https://img.shields.io/badge/🤝-Contribute-important?style=for-the-badge"></a>
+    <a href="https://github.com/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents/stargazers"><img src="https://img.shields.io/github/stars/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents?style=for-the-badge&color=yellow"></a>
+    <a href="https://github.com/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents/fork"><img src="https://img.shields.io/github/forks/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents?style=for-the-badge&color=orange"></a>
+  </div>
 
-Searching (Linear Search, Binary Search)
+  <div style="margin-top:20px;">
+    <button onclick="toggleTheme()" style="padding:8px 15px;border-radius:8px;border:none;background:#53b14f;color:#fff;cursor:pointer;font-weight:600;">🌗 Toggle Theme</button>
+  </div>
+</div>
 
-Sorting (Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Merge Sort)
+---
 
-Matrix operations (addition, multiplication, transpose)
+<!-- INTRO CARDS SECTION -->
+<div align="center" style="margin-top:30px;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;">
 
-Linked Lists
-Singly Linked List (creation, insertion, deletion, searching, traversal)
+  <div style="flex:1 1 250px;max-width:300px;background:linear-gradient(135deg,#0f1724,#051018);border:1px solid var(--border-dark);border-radius:12px;padding:20px;transition:transform 0.3s;">
+    <h3 style="color:#53b14f;">🎯 Goal</h3>
+    <p>Provide clear, organized, and well-commented C programs for all major Data Structures.</p>
+  </div>
 
-Doubly Linked List (creation, insertion, deletion, traversal)
+  <div style="flex:1 1 250px;max-width:300px;background:linear-gradient(135deg,#0f1724,#051018);border:1px solid var(--border-dark);border-radius:12px;padding:20px;transition:transform 0.3s;">
+    <h3 style="color:#53b14f;">📚 For Students</h3>
+    <p>Specially crafted for UG & PG students to prepare for university exams and placements with confidence.</p>
+  </div>
 
-Circular Linked List
+  <div style="flex:1 1 250px;max-width:300px;background:linear-gradient(135deg,#0f1724,#051018);border:1px solid var(--border-dark);border-radius:12px;padding:20px;transition:transform 0.3s;">
+    <h3 style="color:#53b14f;">🚀 Open Source</h3>
+    <p>Free to use, improve, and share. Contributions are welcome to make this repository even better!</p>
+  </div>
 
-Operations like reversal, concatenation
+</div>
 
-Stacks
-Stack implementation (array and linked list)
+---
 
-Push, pop, peek operations
+## ✨ Features
 
-Applications (infix to postfix conversion, expression evaluation)
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:15px;">
 
-Queues
-Queue implementation (array and linked list)
+  <div style="background:#0f1724;border-radius:10px;padding:15px;border:1px solid var(--border-dark);text-align:center;transition:transform 0.3s;">
+    <h3>📌</h3>
+    <p>All Major Data Structures Implemented in C</p>
+  </div>
 
-Circular queue
+  <div style="background:#0f1724;border-radius:10px;padding:15px;border:1px solid var(--border-dark);text-align:center;">
+    <h3>🧠</h3>
+    <p>Well-commented & beginner-friendly code</p>
+  </div>
 
-Double-ended queue (deque)
+  <div style="background:#0f1724;border-radius:10px;padding:15px;border:1px solid var(--border-dark);text-align:center;">
+    <h3>📂</h3>
+    <p>Organized Folder Structure for Easy Access</p>
+  </div>
 
-Priority queue
+  <div style="background:#0f1724;border-radius:10px;padding:15px;border:1px solid var(--border-dark);text-align:center;">
+    <h3>🤝</h3>
+    <p>Open for Student Contributions via Pull Requests</p>
+  </div>
 
-Trees
-Binary Tree (creation, insertion, traversal: inorder, preorder, postorder)
+  <div style="background:#0f1724;border-radius:10px;padding:15px;border:1px solid var(--border-dark);text-align:center;">
+    <h3>🆓</h3>
+    <p>Free to Use for Educational Purposes</p>
+  </div>
 
-Binary Search Tree (BST) (insertion, deletion, searching)
+</div>
 
-Tree traversals (DFS, BFS)
+---
 
-AVL Trees and other variants
+## 📑 Table of Contents
 
-Graphs
-Representation (adjacency matrix, adjacency list)
+<div align="center" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px;">
+  <a href="#-arrays" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">📊 Arrays</a>
+  <a href="#-linked-lists" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">🔗 Linked Lists</a>
+  <a href="#-stacks" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">🧱 Stacks</a>
+  <a href="#-queues" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">📥 Queues</a>
+  <a href="#-trees" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">🌳 Trees</a>
+  <a href="#-graphs" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">🕸️ Graphs</a>
+  <a href="#-others" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">✨ Others</a>
+  <a href="#-repository-structure" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">📁 Structure</a>
+  <a href="#-getting-started" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">⚡ Getting Started</a>
+  <a href="#-contributing" style="text-decoration:none;background:#0f1724;color:#53b14f;padding:10px 15px;border-radius:8px;border:1px solid var(--border-dark);">🤝 Contributing</a>
+</div>
 
-BFS and DFS traversal
+---
 
-Shortest path algorithms
 
-Others
-Hash Tables
 
-Recursion examples (factorial, Fibonacci, Tower of Hanoi, GCD, etc.)
-
-Practice problems and solutions
-
-📁 Repository Structure
-The repo is typically organized as follows:
-
-text
-DataStructure_Using_C_for_UG_PG-OtherStudents/
-├── arrays/
-│   ├── array_operations.c
-│   └── sorting_algorithms.c
-├── linked_lists/
-│   ├── singly_linked_list.c
-│   └── doubly_linked_list.c
-├── stacks/
-│   └── stack_array.c
-├── queues/
-│   └── queue_linkedlist.c
-├── trees/
-│   ├── binary_tree.c
-│   └── bst.c
-├── graphs/
-│   └── bfs_dfs.c
-├── hashing/
-│   └── hashtable.c
-└── README.md
-Note: Check the actual repo for the latest program files and implementations, as this list may not reflect recent updates.
-
-📚 Getting Started
-Clone the repository
-
-text
-git clone https://github.com/cssidhu0001/DataStructure_Using_C_for_UG_PG-OtherStudents.git
-Browse to the topic directory
-
-Compile the C file
-
-text
-gcc filename.c -o program
-./program
-Read comments in the code for explanations and usage
-
-🙌 Contributing
-Want to add your program? Fork the repository, add your code under the correct directory, and submit a pull request.
-
-Ensure your code is properly commented and follows standard C programming practices.
-
-Contributions from all students are encouraged and appreciated!
-
-💬 Support
-For any queries, doubts, or requests for new programs: Please open an issue or comment on the repo.
-
-You can also reach out to the maintainer directly via GitHub messages.
-
-🌱 License
-This repository is created to help students and is open for free use and educational purposes. If you use or enhance the code, please attribute this repository.
-
-⭐️ Please Star the Repo!
-If you find this repository helpful, don’t forget to give it a star to support ongoing development and help more students!
-
-Happy coding and learning Data Structures in C!
