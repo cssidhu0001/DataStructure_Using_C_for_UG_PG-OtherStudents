@@ -35,6 +35,28 @@ void deleteEntireLinkedList();
 void findLoopInLinkedList();
 void removeDuplicateFromLL();
 void findMidofLL();
+
+void countEvenElementsNumberOfNodes()
+{
+    printf("\n <----Find Even Elements Node in Singly Linked List!!---->\n");
+    struct Node *temp = head;
+    int countEvenNode = 0;
+
+    if (head == NULL)
+    {
+        printf("\nCannot Find the Minimum Node ..Linked List is Empty!!\n");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            if (temp->Data % 2 == 0)
+                countEvenNode++;
+            temp = temp->Link;
+        }
+        printf("\nNumber of Nodes Containing Even Elements  in Linked List are : %d ", countEvenNode);
+    }
+}
 void findMinimumNumberNode()
 {
     printf("\n <----Find Minumum in Singly Linked List!!---->\n");
@@ -307,8 +329,9 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
-    findMaximumNumberNode();
-    findMinimumNumberNode();
+    countEvenElementsNumberOfNodes();
+    // findMaximumNumberNode();
+    // findMinimumNumberNode();
     // countNodesOfLinkedList();
     // deleteatfront();
     // traverseLinkedList();
