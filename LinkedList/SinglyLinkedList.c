@@ -329,7 +329,7 @@ int main()
     createLinkedList();
     createLinkedList();
     traverseLinkedList();
-    countEvenElementsNumberOfNodes();
+    countEvenElementsNumberOfNodes(); // counting the number of even elements node in Singly Linked List!!
     // findMaximumNumberNode();
     // findMinimumNumberNode();
     // countNodesOfLinkedList();
