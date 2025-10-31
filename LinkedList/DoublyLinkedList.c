@@ -1,5 +1,5 @@
-#include < stdio.h>
-#include < stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #define MAX 100
 struct node
 {
@@ -7,8 +7,51 @@ struct node
     int data;
     struct node *next;
 };
+struct node *head, *temp;
+struct node *createNodeDLL()
+{
+    struct node *newnode = (struct node *)malloc(1 * (sizeof(struct node)));
+    printf("\n\nEnter the value you want to insert: ");
+    int nodevalue;
+    scanf("%d", &nodevalue);
+    newnode->data = nodevalue;
+    newnode->next = newnode->prev = NULL;
+    return newnode;
+}
 
-struct node *head = NULL, temp = NULL;
+void createDoublyLinkedList()
+{
+    printf("\n-----Creation Doubly Linked List-----");
+    struct node *newnode = createNodeDLL();
+    if (head == NULL)
+    {
+        temp = head = newnode;
+    }
+    else
+    {
+        temp->next = newnode;
+        newnode->prev = temp;
+        temp = newnode;
+    }
+}
+
+void traverseDoublyLinkedList()
+{
+    printf("\n-----Traversing Doubly Linked List-----\n");
+    struct node *tempVar = head;
+    if (head == NULL)
+    {
+        printf("\nCannot Traverse Linked List is Empty!!");
+    }
+    else
+    {
+        while (tempVar != NULL)
+        {
+            printf("%d -->  ", tempVar->data);
+            tempVar = tempVar->next;
+        }
+    }
+}
 
 int main()
 {
@@ -38,7 +81,10 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("");
+            createDoublyLinkedList();
+            break;
+        case 2:
+            traverseDoublyLinkedList();
             break;
 
         default:
