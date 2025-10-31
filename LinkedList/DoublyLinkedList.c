@@ -52,6 +52,23 @@ void traverseDoublyLinkedList()
         }
     }
 }
+void insertAtFrontInLinkedList()
+{
+    printf("\n----- Insert at front in Doubly Linked List-----\n");
+    struct node *newnode = createNodeDLL();
+
+    if (head == NULL)
+    {
+        temp = head = newnode;
+    }
+    else
+    {
+        newnode->next = head;
+        head->prev = newnode;
+        head = newnode;
+        printf("Node inserted in the front of Doubly Linked List Sucessfully!!!");
+    }
+}
 
 int main()
 {
@@ -85,6 +102,9 @@ int main()
             break;
         case 2:
             traverseDoublyLinkedList();
+            break;
+        case 3:
+            insertAtFrontInLinkedList();
             break;
 
         default:
