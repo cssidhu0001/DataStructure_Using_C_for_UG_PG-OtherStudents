@@ -34,7 +34,6 @@ void createDoublyLinkedList()
         temp = newnode;
     }
 }
-
 void traverseDoublyLinkedList()
 {
     printf("\n-----Traversing Doubly Linked List-----\n");
@@ -70,6 +69,27 @@ void insertAtFrontInLinkedList()
     }
 }
 
+void insertAtEndInLinkedList()
+{
+    printf("\n----- Insert at End in Doubly Linked List-----\n");
+    struct node *newnode = createNodeDLL();
+    struct node *temVar = head;
+
+    if (head == NULL)
+    {
+        temp = head = newnode;
+    }
+    else
+    {
+        while (temVar->next != NULL)
+        {
+            temVar = temVar->next;
+        }
+        temVar->next = newnode;
+        newnode->prev = temVar;
+        printf("Node inserted in the End of Doubly Linked List Sucessfully!!!");
+    }
+}
 int main()
 {
     while (1)
@@ -105,6 +125,9 @@ int main()
             break;
         case 3:
             insertAtFrontInLinkedList();
+            break;
+        case 4:
+            insertAtEndInLinkedList();
             break;
 
         default:
