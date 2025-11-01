@@ -18,7 +18,23 @@ struct node *createNodeDLL()
     newnode->next = newnode->prev = NULL;
     return newnode;
 }
-
+void deleteAtFrontInDoubly()
+{
+    struct node *temp = head;
+    printf("\n-----------Deletion at front in Doubly Linked List !!");
+    if (head == NULL)
+    {
+        printf("\n Cannot Delete the Node from front as Linked List is Empty !!");
+    }
+    else
+    {
+        int delValue = head->data;
+        head = head->next;
+        head->prev = NULL;
+        free(temp);
+        printf("\nFront Node  --> Value : %d  in Doubly Linked List Deleted Sucesfully!!!\n", delValue);
+    }
+}
 void createDoublyLinkedList()
 {
     printf("\n-----Creation Doubly Linked List-----");
@@ -102,7 +118,7 @@ int main()
         printf("\nPRESS 5 INSERT AT POSITION DOUBLY LINKED LIST ");
         printf("\nPRESS 6 INSERT AT VALUE DOUBLY LINKED LIST ");
         printf("\nPRESS 7 TO SEARCH ELEMENT DOUBLY LINKED LIST ");
-        printf("\nPRESS 8 DELETE AT END DOUBLY LINKED LIST ");
+        printf("\nPRESS 8 DELETE AT FRONT DOUBLY LINKED LIST ");
         printf("\nPRESS 9 DELETE AT POSITION DOUBLY LINKED LIST ");
         printf("\nPRESS 10 DELETE AT VALUE DOUBLY LINKED LIST ");
         printf("\nPRESS 11 COUNT NODE IN  DOUBLY LINKED LIST ");
@@ -128,6 +144,9 @@ int main()
             break;
         case 4:
             insertAtEndInLinkedList();
+            break;
+        case 8:
+            deleteAtFrontInDoubly();
             break;
 
         default:
