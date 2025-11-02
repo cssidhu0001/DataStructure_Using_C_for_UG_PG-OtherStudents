@@ -5,6 +5,27 @@ struct node
     int data;
     struct node *link;
 };
+void insertatfrontinSinglyLinkedList(struct node **head)
+{
+    struct node *newnode;
+    newnode = (struct node *)malloc(1 * sizeof(struct node));
+    printf("\nEnter Value");
+    int value;
+    scanf("%d", &value);
+    newnode->data = value;
+    newnode->link = NULL;
+
+    if (*head == NULL)
+    {
+        *head = newnode;
+    }
+    else
+    {
+        newnode->link = *head;
+        *head = newnode;
+        printf("\n Node at front Inserted Sucessfully!!\n");
+    }
+}
 void traverseSinglyLinkedList(struct node *head)
 {
     struct node *temp = head;
@@ -50,5 +71,7 @@ int main()
     createSinglyLinkedList(&head, &temp);
     createSinglyLinkedList(&head, &temp);
     createSinglyLinkedList(&head, &temp);
+    traverseSinglyLinkedList(head);
+    insertatfrontinSinglyLinkedList(&head);
     traverseSinglyLinkedList(head);
 }
