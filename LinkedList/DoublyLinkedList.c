@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100
-struct node
+struct node //structure Declaration of Node 
 {
-    struct node *prev;
-    int data;
-    struct node *next;
+    struct node *prev; // previous pointer which will point to th previous node
+    int data; // data variable will contain data in it we can have as many as data variable in node
+    struct node *next; // next pointer which will point to the next node 
 };
 struct node *head, *temp;
 struct node *createNodeDLL()
