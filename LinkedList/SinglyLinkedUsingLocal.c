@@ -5,7 +5,7 @@ struct node
     int data;
     struct node *link;
 };
-void insertAtMidPosSinglyLinkedList(struct node *head, int pos)
+void insertAtMidPosSinglyLinkedList(struct node *head, int pos) // using position as agrument
 {
     struct node *newnode;
     newnode = (struct node *)malloc(1 * sizeof(struct node));
