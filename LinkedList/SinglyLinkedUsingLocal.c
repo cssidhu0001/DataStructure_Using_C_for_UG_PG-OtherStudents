@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct node
+struct node // struct of the singly Linked List
 {
     int data;
     struct node *link;
