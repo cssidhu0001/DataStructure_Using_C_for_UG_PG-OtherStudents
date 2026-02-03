@@ -22,7 +22,7 @@ int main()
     {
         printf("%d  ", arr[i]);
     }
-    // Insertation into Array using Position by user
+    
     int pos;
     printf("\nEnter position you want to insert Element at: ");
     scanf("%d", &pos);
@@ -31,7 +31,7 @@ int main()
         printf("\nInvalid Positon! Please enter a number between 1 and %d.\n", size);
         return 1;
     }
-    int value; // decalartion of value and creation of memory after the entered position is valid
+    int value; 
     printf("\nEnter the value you want to insert  Posistion%d:  ", pos);
     scanf("%d", &value);
     for (int j = size - 1; j >= pos - 1; j--)
