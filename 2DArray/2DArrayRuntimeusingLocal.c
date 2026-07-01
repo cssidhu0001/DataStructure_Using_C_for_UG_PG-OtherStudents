@@ -2,6 +2,8 @@
 #define MAX 100
 int arr[MAX][MAX];
 int row, col;
+
+
 void create2Darray()
 {
     int i, j;
